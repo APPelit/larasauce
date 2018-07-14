@@ -1,0 +1,57 @@
+{
+  "name": "appelit/larasauce",
+  "description": "Laravel EventSauce Integration",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Mark van Beek",
+      "email": "mark@appelit.com"
+    }
+  ],
+  "require": {
+    "php": ">= 7.2",
+    "ext-json": "*",
+    "ext-pcre": "*",
+    "eventsauce/eventsauce": "^0.4.0",
+    "illuminate/bus": "^5.6",
+    "illuminate/cache": "^5.6",
+    "illuminate/console": "^5.6",
+    "illuminate/queue": "^5.6"
+  },
+  "require-dev": {
+    "codedungeon/phpunit-result-printer": "^0.19.10",
+    "orchestra/testbench": "~3.6",
+    "phpunit/phpunit": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "APPelit\\LaraSauce\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "APPelit\\LaraSauce\\LaraSauceProvider"
+      ],
+      "aliases": {
+        "LaraSauce": "APPelit\\LaraSauce\\LaraSauce"
+      }
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
